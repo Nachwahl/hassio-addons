@@ -8,26 +8,29 @@ description: TV streaming server and recorder.
 devices:
 - /dev/dvb
 - /dev/dri
-image: ghcr.io/gauthamvarmak/tvheadend/{arch}
+image: ghcr.io/nachwahl/tvheadend/{arch}
 map:
 - config:rw
 name: TVHeadend
-options:
-  init_commands: []
-  system_packages: []
 ports:
   9981/tcp: 9981
   9982/tcp: 9982
 ports_description:
   9981/tcp: TVH Web Interface
   9982/tcp: TVH HTSP
+options:
+  system_packages: []
+  init_commands: []
+  run_opts: ""
 schema:
-  init_commands:
-  - str
   system_packages:
-  - str
+    - str
+  init_commands:
+    - str
+  run_opts:
+    - str
 slug: tvheadend
 stage: experimental
-url: https://github.com/GauthamVarmaK/addon-tvheadend
+url: https://github.com/Nachwahl/addon-tvheadend
 version: 2.3.0
 webui: http://[HOST]:[PORT:9981]/
