@@ -8,7 +8,6 @@ description: TV streaming server and recorder.
 devices:
 - /dev/dvb
 - /dev/dri
-image: ghcr.io/nachwahl/tvheadend/{arch}
 map:
 - config:rw
 name: TVHeadend
