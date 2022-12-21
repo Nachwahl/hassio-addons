@@ -5,6 +5,7 @@ arch:
 - armv7
 - i386
 description: TV streaming server and recorder.
+image: ghcr.io/gauthamvarmak/tvheadend/{arch}
 devices:
 - /dev/dvb
 - /dev/dri
@@ -20,16 +21,15 @@ ports_description:
 options:
   system_packages: []
   init_commands: []
-  run_opts: ""
 schema:
   system_packages:
     - str
   init_commands:
-    - str
-  run_opts:
     - str
 slug: tvheadend
 stage: experimental
 url: https://github.com/Nachwahl/addon-tvheadend
 version: 2.3.0
 webui: http://[HOST]:[PORT:9981]/
+host_network: true
+
